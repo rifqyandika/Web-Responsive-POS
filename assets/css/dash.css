@@ -1,0 +1,264 @@
+@font-face {
+    font-family: MyFont;
+    src: url(../fonts/AirbnbCerealMedium.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: MyFont;
+}
+
+.card img:hover {
+    background-color: teal;
+}
+
+.image-item .card{
+    background-color: transparent;
+    border: none;
+    /* padding: 10px; */
+    /* padding-left: 10px; */
+    /* display: inline-block */
+    /* margin: 0 auto; Added */
+    float: none; /* Added */
+    /* margin-bottom: 10px; Added */
+}
+
+/* .image-item .card img {
+    width: 80%;
+    height: auto;
+} */
+
+/* .image-item .card h5 {
+    margin-top: -10px;
+    margin-bottom: 1px;
+    font-size: 25px;
+} */
+
+.image-item .card h4 {
+    font-size: 20px;
+}
+
+
+.is-item img{
+    margin-top: 45px;
+    margin-bottom: -30px;
+    height: 150px;
+}
+
+.is-item h6{
+    font-size: 20px;
+}
+
+.is-item p {
+    font-size: 14px;
+    color: rgb(179, 175, 175);
+}
+
+.image-item h5{
+    font-size: 20px;
+}
+
+.image-item h4{
+    font-size: 30px;
+}
+
+.item-cart {
+    text-align: left;
+}
+
+#myform {
+    position: static;
+    text-align: left;
+    padding: -1px;
+    padding-top: 25px;
+    /* border: 1px solid black; */
+}
+
+.shop-item {
+    position: static;
+    padding-left: 5px;
+    /* border: 1px solid black; */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+  
+.card img .overlay {
+    opacity: 1;
+}
+
+.item-total-sub {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+
+
+#contentku {
+    background-color: rgba(190, 195, 202, 0.3);
+}
+
+.dash-graph img {
+    align-items: center;
+    height: 80%;
+    position: relative;
+    /* padding: 2px; */
+}
+
+.diagram {
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.status {
+    /* border: 1px solid black; */
+    height: 180px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.status-1 {
+    background: linear-gradient(278.29deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25));
+    border-radius: 10px;
+}
+
+.data-status {
+    position: relative;
+    overflow: hidden;
+    padding-top: 42px;
+    padding-left: 30px;
+}
+
+.data-status p{
+    margin-top: 1px;
+}
+
+.status-2 {
+    background: linear-gradient(278.29deg, #29DFFF 30.05%, rgba(41, 223, 255, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+    border-radius: 10px;
+}
+
+.status-3 {
+    background: linear-gradient(278.29deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+    border-radius: 10px;
+}
+
+.items-input .disabled , .btnku{
+    border-radius: 0px ;
+    background-color: white;
+    border: 2px solid #82DE3A;
+    margin-top: 10px;
+    width: 25px;
+}
+
+.item-cart-total p {
+    /* position: absolute; */
+    right: 0;
+    bottom: 0px;
+    /* padding-left: 1px; */
+}
+
+.img img {
+    width: 80px;
+    align-content: center;
+}
+
+.total p {
+    padding-top: 56px;
+}
+
+.menu .link-menu{
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.menu {
+    margin-left: 9px;
+}
+
+.btn-check {
+    background-color: #57CAD5;
+    border: none;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    height: 35px;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #F24F8A;
+    border: none;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    height: 35px;
+    color: white;
+}
+
+.button-first {
+    margin-left: 22px;
+}
+
+.order-invoice {
+    /* border: 1px solid black; */
+    padding: 20px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-action {
+    background: #CECECE;
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    padding: 5px;
+    font-family: MyFont;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4F4E4E;
+}
+
+@media (max-width: 575.98px) {
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60px;
+        
+    }
+    .button-first {
+        display: none;
+    }
+    .diagram h3{
+        font-size: 20px;
+    }
+
+    .order-invoice h3 {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 1024px){
+
+  }

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="assets/css/dash.css">
+</head>
+
+<body>
+    <header>
+        <!-- <div class="container-fluid"> -->
+        <div class="row no-gutters">
+            <div class="col-md-12">
+                <!-- <div class="container-fluid"> -->
+                <nav class="navbar navbar-light pl-0 pr-0" style="box-shadow: 0 5px 5px -5px #333;">
+                    <div class="container-fluid">
+                        <div class="button-first">
+                            <img src="assets/img/toggler.png" alt="">
+                        </div>
+                        <a href="" data-target="#sidebar" data-toggle="collapse" class="d-md-none"><img
+                                src="assets/img/toggler.png" alt=""></a>
+                        <span class="navbar-brand mb-0 mx-auto h1">Food items</span>
+                    </div>
+                    <!-- <img src="assets/img/search.png" class="pt-0" style="height: 20px;" alt="icon-search"> -->
+                </nav>
+            </div>
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-12 col-md-1 collapse d-md-flex text-center  bg-white" id="sidebar"
+                        style="box-shadow: 5px 0 5px -5px #333;">
+                        <ul class="nav flex-column flex-nowrap nav-sm">
+                            <div class="menu ">
+                                <div class="link-menu">
+                                    <a href="index.html"><img src="assets/img/menu1.png" alt=""></a>
+                                </div>
+                                <div class="link-menu">
+                                    <a href="dashboard.html"><img src="assets/img/menu2.png" alt=""></a>
+                                </div>
+                                <div class="link-menu">
+                                    <a href="#ModalAdd"><img src="assets/img/menu3.png" data-toggle="modal"
+                                            data-target="#ModalAdd" alt=""></a>
+                                </div>
+                                <div class="link-menu">
+                                    <a href="cart2.html" ><img src="assets/img/menu1.png" alt="" data-toggle="modal" data-target="#ModalAdd"></a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-md-11" style="background-color: #FCFAFA; z-index: -1;">
+                        <div class="dahsboardku pl-4">
+                            <div class="container-fluid row pt-5 mb-1 pb-1">
+                                <div class="col-md-4 dash-graph">
+                                    <div class="status status-1">
+                                        <div class="container">
+                                            <div class="data-status">
+                                                <span>Today's Income</span>
+                                                <h3>Rp. 1.000.000</h3>
+                                                <span>+2% Yesterday</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 dash-graph">
+                                    <div class="status status-2">
+                                        <div class="container">
+                                            <div class="data-status">
+                                                <span>Orders</span>
+                                                <h3>3.270</h3>
+                                                <span>+5% Last Week</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 dash-graph">
+                                    <div class="status status-3">
+                                        <div class="container">
+                                            <div class="data-status">
+                                                <span>This Year's Income</span>
+                                                <h3>Rp. 100.000.000.000</h3>
+                                                <span>+5% Last Week</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 dash-graph">
+                                    <div class="diagram">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="container">
+                                                    <h3>Revenue</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 text-right">
+                                                <div class="container">
+                                                    <button class="btn-action dropdown-toggle"
+                                                        data-toggle="dropdown">Month</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <canvas id="myChart" style="width: 50%;">tes</canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 tables pt-5">
+                                    <div class="order-invoice">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h3 class="mb-4">Recent Order</h3>
+                                            </div>
+                                            <div class="col-6 text-right">
+                                                <button class="btn-action dropdown-toggle"
+                                                    data-toggle="dropdown">Action</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="table-responsive-md">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Invoice</th>
+                                                                <th scope="col">Cashier</th>
+                                                                <th scope="col">Date</th>
+                                                                <th scope="col">Orders</th>
+                                                                <th scope="col">Amount</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Mark</td>
+                                                                <td>Otto</td>
+                                                                <td>@mdo</td>
+                                                                <td>@mdo</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Jacob</td>
+                                                                <td>Thornton</td>
+                                                                <td>@fat</td>
+                                                                <td>@mdo</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>Larry</td>
+                                                                <td>the Bird</td>
+                                                                <td>@twitter</td>
+                                                                <td>@mdo</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <section>
+        <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Item</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="name row mb-2">
+                            <div class="col-3 pt-1">Name</div>
+                            <div class="col-9" style="border: none;"><input type="text" class="form-control shadow-sm bg-white rounded" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></div>
+                        </div>
+                        <div class="name row mb-2">
+                            <div class="col-3 pt-1">Image</div>
+                            <div class="col-9" style="border: none;"><input type="text" class="form-control shadow-sm bg-white rounded" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></div>
+                        </div>
+                        <div class="name row mb-2">
+                            <div class="col-3 pt-1">Name</div>
+                            <div class="col-5" style="border: none;"><input type="text" class="form-control shadow-sm bg-white rounded" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></div>
+                        </div>
+                        <div class="name row mb-2">
+                            <div class="col-3 pt-1">Category</div>
+                            <div class="col-5" style="border: none;">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" style="background-color: white; color: #CECECE;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Category
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" >Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

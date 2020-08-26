@@ -10,4 +10,4 @@ This preview homepage POS App Coffee
 ![Home](https://user-images.githubusercontent.com/58803465/91355101-e4476f00-e817-11ea-8bc5-8caa6103979a.png)
 
 ## Demo
-Link Demo [Demo POS App](https://gracious-edison-abaf13.netlify.app/index.html)
+Link Demo [Demo POS App](https://awesome-wozniak-58ceff.netlify.app/)

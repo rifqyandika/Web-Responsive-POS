@@ -240,6 +240,12 @@ body{
     color: white;
   }
 
+  .checkout-row {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
 
 @media (max-width: 575.98px) {
     .menu {
@@ -253,6 +259,12 @@ body{
     .button-first {
         display: none;
     }
+    .checkout-row {
+        position: static;
+        /* bottom: 5; */
+        width: 100%;
+    }
+
 }
 @media screen and (min-width: 1024px){
 
